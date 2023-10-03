@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* BASE STYLES */
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* COMMON STYLES */
+.section-padding {
+  @apply py-20;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.eq {
+  transition: 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* TYPOGRAPHY STYLES */
+h1 {
+  @apply text-8xl font-semibold;
+}
+
+h2 {
+  @apply text-6xl font-semibold;
+}
+
+h3 {
+  @apply text-5xl font-semibold;
+}
+
+h4 {
+  @apply text-4xl font-semibold;
+}
+
+h5 {
+  @apply text-3xl font-medium;
+}
+
+h6 {
+  @apply text-2xl font-medium;
+}
+
+p {
+  @apply text-lg;
 }
